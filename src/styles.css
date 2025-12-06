@@ -133,6 +133,7 @@ nav ul li a:hover::after,
   height: 100vh; /* let it shrink */
   min-height: 60vh; /* optional: avoid it getting too small */
   background: url('../assets/creative-desktop-wallpaper_941097-67554.avif') center center/cover no-repeat;
+  
   position: relative;
   display: flex;
   align-items: center;
@@ -250,6 +251,8 @@ nav ul li a:hover::after,
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: cover;  /* image resizes automatically */
+    background-position: right;
 }
 
 .content {
