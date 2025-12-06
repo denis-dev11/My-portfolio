@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=document.getElementById("hamburger"),t=document.getElementById("mobileMenu");e.addEventListener("click",function(){t.classList.toggle("active")}),document.addEventListener("click",function(n){t.contains(n.target)||e.contains(n.target)||t.classList.remove("active")})})();
