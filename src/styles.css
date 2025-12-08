@@ -133,13 +133,13 @@ nav ul li a:hover::after,
   height: 100vh; /* let it shrink */
   min-height: 60vh; /* optional: avoid it getting too small */
   background: url('../assets/creative-desktop-wallpaper_941097-67554.avif') center center/cover no-repeat;
-  
   position: relative;
   display: flex;
   align-items: center;
   padding: 0 60px;
   color: white;
 }
+
 
 
 .hero::before {
@@ -192,6 +192,25 @@ nav ul li a:hover::after,
   transform: translateY(-3px);
 }
 
+
+/* SOCIAL LINKS AT THE BOTTOM */
+
+.socials {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  display: flex;
+  gap: 18px;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 22px;
+}
+
+
+
+
 /* PHONE NUMBER (hidden on desktop, visible in mobile menu) */
 .phone-number {
   display: block;
@@ -208,6 +227,101 @@ nav ul li a:hover::after,
 .mobile-phone{
   display: none;
 }
+
+
+
+/* ABOUT SECTION */
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(14, 14, 39);
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  color: white;
+}
+
+.about-wrapper {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* LEFT CONTENT — SAME AS HOME */
+.about-text {
+  max-width: 650px; /* EXACT SAME AS .content */
+}
+
+.about-text h2 {
+  font-size: 48px;   /* EXACT SAME SIZE AS HOME H1 */
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-decoration: underline #00eaff;
+}
+
+.about-text h2 span {
+  color: #00eaff;
+}
+
+.about-email {
+  font-size: 28px;
+  color: #00eaff;
+  margin-bottom: 100px;
+  display: block;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.about-address {
+  margin-top: 40px; /* space from the paragraph */
+  text-align: center;
+  font-size: 16px;
+  color: #00eaff; /* optional: match accent color */
+  opacity: 0.9;
+}
+
+
+/* RIGHT IMAGE - ABOUT SECTION (DESKTOP) */
+.about-image {
+  display: flex;
+  justify-content: flex-end; /* push image to the right */
+  align-items: center;
+  flex: 1;
+}
+
+.about-image img {
+  max-height: 90vh;   /* limit height to viewport to prevent scrolling */
+  width: auto;        /* maintain aspect ratio */
+  max-width: 100%;    /* don’t overflow container */
+  filter: drop-shadow(0 15px 40px rgba(0,0,0,0.6));
+  object-fit: contain; /* scale proportionally without stretching */
+}
+
+.about-location {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #00eaff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.about-location i {
+  color: #00eaff;
+  font-size: 1.1rem;
+}
+
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -277,6 +391,13 @@ nav ul li a:hover::after,
     z-index: 250;
   }
 
+  /*  SOCIAL MEDIA LINKS MOBILE */
+
+    .socials {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .phone-number{ 
     display: none;
   }
@@ -291,4 +412,79 @@ nav ul li a:hover::after,
   display: block;
 }
 
+
+}
+
+/* ABOUT SECTION MOBILE */
+@media (max-width: 1150px) {
+
+  .about-section {
+    display: flex;           /* keep flex for centering */
+    flex-direction: column;  /* stack image and text vertically */
+    align-items: center;
+    padding: 140px 25px 80px; /* top padding to avoid header overlap */
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column; /* stack image above text */
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .about-image {
+    order: -1; /* put image above text */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center horizontally */
+  }
+
+  .about-image img {
+    width: 240px; /* mobile-friendly size */
+    height: auto; 
+    object-fit: cover;
+  }
+
+  .about-text {
+    order: 0; /* text below image */
+    align-items: center;
+    text-align: center;
+    max-width: 650px;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+/* LOADER CSS FOR SMOOTH PAGE SWITCHING */
+
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(14,14,39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Spinner */
+#page-loader .spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #00eaff;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
