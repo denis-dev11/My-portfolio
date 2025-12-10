@@ -324,6 +324,261 @@ nav ul li a:hover::after,
 
 
 
+/* =========================
+   PORTFOLIO PAGE
+========================= */
+
+.portfolio-hero {
+  min-height: 55vh;
+  background: linear-gradient(
+      rgba(14,14,39,0.9),
+      rgba(14,14,39,0.95)
+    ),
+    url(759887d40a2b15e53273.avif) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 140px 60px 80px;
+  color: white;
+}
+
+.portfolio-hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.portfolio-hero-content h1 span {
+  color: #00eaff;
+}
+
+.portfolio-hero-content p {
+  margin-top: 12px;
+  font-size: 16px;
+  opacity: 0.85;
+  letter-spacing: 0.2em;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio-section {
+  background: rgb(14,14,39);
+  padding: 80px 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.portfolio-card {
+  cursor: pointer;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,234,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  border-color: #00eaff;
+}
+
+.portfolio-image {
+  height: 200px;
+  background: linear-gradient(
+    135deg,
+    rgba(0,234,255,0.25),
+    rgba(20,20,76,0.8)
+  );
+}
+
+.portfolio-info {
+  padding: 20px;
+  color: white;
+}
+
+.portfolio-info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #00eaff;
+}
+
+.portfolio-info p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills-section {
+  background: rgb(14,14,39);
+  padding: 80px 60px;
+  color: white;
+}
+
+.skills-wrapper {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+}
+
+/* SECTION TITLES */
+.skills-block h2 {
+  font-size: 16px;
+  margin-bottom: 35px;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.skills-block h2::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #00eaff;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+/* SKILL ROW */
+.skill {
+  margin-bottom: 24px;
+}
+
+.skill-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* BAR */
+.skill-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.25);
+  position: relative;
+}
+
+.skill-bar span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  background: #00eaff;
+}
+
+.skill-bar span::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #00eaff;
+  background: rgb(14,14,39);
+}
+
+/* PERSONAL SKILLS */
+.personal-skills {
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+  background: rgb(14,14,39);
+  padding: 80px 60px;
+  color: white;
+}
+
+.section-title {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #00eaff;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+/* Horizontal layout */
+.experience-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Card */
+.experience-item {
+  flex: 1;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,234,255,0.15);
+  border-radius: 12px;
+  padding: 30px 25px;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-6px);
+  border-color: #00eaff;
+}
+
+/* Timeline dot */
+.exp-dot {
+  cursor: pointer;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid #00eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #00eaff;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.exp-dot span {
+  line-height: 1.2;
+}
+
+/* Content */
+.exp-content h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.exp-content p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -469,6 +724,39 @@ nav ul li a:hover::after,
 .about-text p {
   margin-top: 0;
 }
+
+
+
+
+/*  PORTFOLIO MOBILE DESIGN */
+
+.portfolio-hero {
+    padding: 120px 25px 60px;
+    text-align: center;
+  }
+
+  .portfolio-hero-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;           /* horizontal center */
+}
+  .portfolio-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .portfolio-section {
+    padding: 60px 25px;
+  }
+
+
+    .experience-row {
+    flex-direction: column;
+  }
+
+  .experience-item {
+    justify-content: flex-start;
+  }
+
 }
 
 
