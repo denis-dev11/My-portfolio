@@ -33,6 +33,11 @@ const config = {
       filename: "about.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio.html",
+      filename: "portfolio.html",
+    }),
+
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
