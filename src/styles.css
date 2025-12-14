@@ -581,6 +581,28 @@ nav ul li a:hover::after,
   opacity: 0.8;
 }
 
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.buttons a {
+  padding: 10px 25px;
+  border: 2px solid #00eaff;
+  border-radius: 25px;
+  color: #00eaff;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons a:hover {
+  background: #00eaff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+
 
 /* =========================
    PROJECT HOVER PREVIEW
