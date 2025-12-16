@@ -14,6 +14,8 @@ const config = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
+    clean: true,
+    publicPath: "",
   },
   devServer: {
     open: true,
@@ -21,6 +23,7 @@ const config = {
     watchFiles: ["./index.html"],
     hot: false,
     liveReload: true,
+    static: "./dist",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -58,9 +61,9 @@ const config = {
     {
         test: /\.pdf$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/[name][ext]' // keep file name
-        }
+         generator: {
+          filename: "assets/[name][ext]",
+        },
       },
 
       {
