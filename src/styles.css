@@ -700,6 +700,7 @@ nav ul li a:hover::after,
   text-transform: uppercase;
   color: #00eaff;
   opacity: 0.85;
+  text-align: center;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
